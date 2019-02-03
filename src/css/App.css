@@ -1,0 +1,111 @@
+.fixedHeaderContainer {
+    background:#20232a;
+    color:#fff;
+    min-height:50px;
+    padding:8px 0;
+    position:fixed;
+    width:100%;
+    z-index:9999
+}
+
+@media only screen and (min-width:1024px) {.fixedHeaderContainer{flex-shrink:0}}
+
+.wrapper {
+    margin:0 auto;
+    max-width:1100px;
+    padding:0 20px
+}
+
+.fixedHeaderContainer a {
+    align-items:center;
+    border:0;
+    color:#fff;
+    display:flex;
+    flex-flow:row nowrap;
+    height:34px;
+    z-index:10000
+}
+
+.fixedHeaderContainer header {
+    display:flex;
+    flex-flow:row nowrap;
+    position:relative;
+    text-align:left
+}
+
+.fixedHeaderContainer header img {
+    height:100%;
+    margin-right:10px
+}
+
+.fixedHeaderContainer header .headerTitle {
+    font-size:1.25em;margin:0
+}
+
+.fixedHeaderContainer header .headerTitleWithLogo {
+    display:block;
+    font-size:1.25em;
+    line-height:18px;
+    margin:0;
+    position:relative;
+    z-index:9999
+}
+
+.navigationSlider {
+    height:34px;
+    margin-left:auto;
+    position:relative
+}
+
+.navigationSlider .navSlideout {
+    cursor:pointer;
+    padding-top:4px;
+    position:absolute;
+    right:10px;
+    top:0;
+    transition:top .3s;
+    z-index:101
+}
+
+.navigationSlider .slidingNav {
+    bottom:auto;
+    box-sizing:border-box;
+    left:0;
+    position:fixed;
+    right:0;
+    top:0
+}
+
+.navigationSlider .slidingNav ul {
+    background:#61dafb;
+    box-sizing:border-box;
+    color:#fff;
+    display:flex;
+    flex-wrap:nowrap;
+    list-style:none;
+    margin-top:50px;
+    padding:0;
+    width:100%
+}
+
+.navigationSlider .slidingNav ul li {
+    flex:1 1 auto;
+    margin:0;
+    text-align:center;
+    white-space:nowrap
+}
+
+.navigationSlider .slidingNav ul li a {
+    align-items:center;
+    box-sizing:border-box;
+    color:#20232a;
+    color:inherit;
+    display:flex;
+    font-size:.9em;
+    height:auto;
+    height:50px;
+    justify-content:center;
+    margin:0;
+    padding:10px;
+    transition:background-color .3s
+}
