@@ -1,20 +1,23 @@
 import React from 'react';
-class Header extends React.Component {
 
+function ComposeMenu(props) {
+  return <li><a href={props.linked}>{props.title}</a></li>;
+}
+
+class Header extends React.Component {
   render() {
     return (
       <ul>
         {/* <li><a class="active" href="#">Home</a></li> */}
-        <li>
+        {/* <li>
           <a href="#">
 -              <img src="./src/images/logo.svg"/>
 -         </a>
-        </li>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Movie</a></li>
-        <li><a href="#">Music</a></li>
-        <li><a href="#">Book</a></li>
-        <li><a href="#">About</a></li>
+        </li> */}
+        <ComposeMenu linked="#" title="Movie" />
+        <ComposeMenu linked="#" title="Music" />
+        <ComposeMenu linked="#" title="Book" />
+        <ComposeMenu linked="#" title="About" />
     </ul>
     );
   }
