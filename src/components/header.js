@@ -1,10 +1,21 @@
 import React from 'react';
 
-function ComposeMenu(props) {
-  return <li><a href={props.linked}>{props.title}</a></li>;
-}
-
 class Header extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {active: true};
+
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick() {
+    this.setState(state => ({
+      active: !state.active
+    }));
+    console.log('active is:', this.state.active);
+  }
+
+
   render() {
     return (
       <ul>
@@ -14,10 +25,10 @@ class Header extends React.Component {
 -              <img src="./src/images/logo.svg"/>
 -         </a>
         </li> */}
-        <ComposeMenu linked="#" title="Movie" />
-        <ComposeMenu linked="#" title="Music" />
-        <ComposeMenu linked="#" title="Book" />
-        <ComposeMenu linked="#" title="About" />
+        <li><a href="#" onClick={this.handleClick}>Movie</a></li>
+        <li><a href="#" onClick={this.handleClick}>Music</a></li>
+        <li><a href="#" onClick={this.handleClick}>Book</a></li>
+        <li><a href="#" onClick={this.handleClick}>About</a></li>
     </ul>
     );
   }
